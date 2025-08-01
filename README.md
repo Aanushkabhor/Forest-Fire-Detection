@@ -48,17 +48,9 @@ model = keras.Sequential([
     keras.layers.Flatten(),
     keras.layers.Dense(512, activation='relu'),
     keras.layers.Dense(1, activation='sigmoid')  # Binary output
-])
-⚙️ Compilation
-python
-Copy
-Edit
-model.compile(
-    optimizer='adam',
-    loss='binary_crossentropy',
-    metrics=['accuracy']
-)
+
 🏋️‍♀️ Training
+
 Trained for 7 epochs on the training dataset.
 
 Validation accuracy tracked using:
@@ -67,12 +59,13 @@ python
 Copy
 Edit
 model.fit(train_dataset, epochs=7, validation_data=test_dataset)
-📈 Evaluation (Expected)
-Though evaluation plots weren't previewed yet, it is likely that training and validation:
+
+📈 Evaluation
 
 Accuracy curves and loss curves were plotted using matplotlib.
 
 ✅ Outcome
+
 The model learns to classify forest fire and non-fire images with binary classification.
 
 A practical solution for early forest fire detection using AI.
